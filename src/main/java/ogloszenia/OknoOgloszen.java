@@ -131,6 +131,7 @@ public class OknoOgloszen {
 			File plikWynikowy = fileChooser.getSelectedFile();
 			
 			ObslugaCSV.zapiszCSV(ogloszenia, plikWynikowy);
+			lblStatus.setText("Zapisano ogłoszeń " + ogloszenia.size());
 		}
 		
 	}

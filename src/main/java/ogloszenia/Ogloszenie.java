@@ -1,5 +1,9 @@
 package ogloszenia;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Ogloszenie {
 	// Klasa "immutable" - raz utworzony obiekt nie będzie się już zmieniał
 	private final String tytul;
