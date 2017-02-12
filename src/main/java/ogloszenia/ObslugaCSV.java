@@ -1,8 +1,9 @@
 package ogloszenia;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.List;
 
 import org.apache.commons.csv.CSVFormat;
@@ -14,11 +15,13 @@ public class ObslugaCSV {
 	}
 
 	public static void zapiszCSV(List<Ogloszenie> ogloszenia, File plik) {
-		try(FileWriter wyjscie = new FileWriter(plik)) {
-			
+		try(Writer wyjscie = new PrintWriter(plik, "windows-1250")) {
 			CSVPrinter csvPrinter = null;
 			try {
-				csvPrinter = CSVFormat.DEFAULT.withDelimiter(';').withHeader("Cena", "Rocznik", "Opis", "Adres").print(wyjscie);
+				csvPrinter = CSVFormat.DEFAULT
+						.withDelimiter(';')
+						.withHeader("Cena", "Rocznik", "Opis", "Adres")
+						.print(wyjscie);
 			
 				for(Ogloszenie ogloszenie : ogloszenia) {
 					csvPrinter.printRecord(ogloszenie.getCena(), ogloszenie.getRocznik(), ogloszenie.getTytul(), ogloszenie.getUrl());
