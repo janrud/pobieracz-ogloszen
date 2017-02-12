@@ -5,11 +5,13 @@ public class Ogloszenie {
 	private final String tytul;
 	private final int rocznik;
 	private final int cena;
+	private final String url;
 	
-	public Ogloszenie(String tytul, int rocznik, int cena) {
+	public Ogloszenie(String tytul, int rocznik, int cena, String url) {
 		this.tytul = tytul;
 		this.rocznik = rocznik;
 		this.cena = cena;
+		this.url = url;
 	}
 
 	public String getTytul() {
@@ -24,9 +26,13 @@ public class Ogloszenie {
 		return cena;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
 	@Override
 	public String toString() {
-		return tytul + ", rocznik=" + rocznik + ", cena=" + cena;
+		return tytul + ", rocznik=" + rocznik + ", cena=" + cena + "   pod adresem " + url;
 	}
 
 	@Override
@@ -36,6 +42,7 @@ public class Ogloszenie {
 		result = prime * result + cena;
 		result = prime * result + rocznik;
 		result = prime * result + ((tytul == null) ? 0 : tytul.hashCode());
+		result = prime * result + ((url == null) ? 0 : url.hashCode());
 		return result;
 	}
 
@@ -57,7 +64,11 @@ public class Ogloszenie {
 				return false;
 		} else if (!tytul.equals(other.tytul))
 			return false;
+		if (url == null) {
+			if (other.url != null)
+				return false;
+		} else if (!url.equals(other.url))
+			return false;
 		return true;
 	}
-
 }

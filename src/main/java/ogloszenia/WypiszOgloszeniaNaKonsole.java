@@ -58,12 +58,10 @@ public class WypiszOgloszeniaNaKonsole {
 	    	if(matcherRocznika.find()) {
 	    		rocznik = Integer.parseInt(matcherRocznika.group(1));
 	    	}
-	    	Ogloszenie ogl = new Ogloszenie(tytul, rocznik, cena);
+	    	Ogloszenie ogl = new Ogloszenie(tytul, rocznik, cena, "");
 	    	System.out.println(ogl);
 		}
 		
-		
 		driver.quit();
 	}
-
 }
