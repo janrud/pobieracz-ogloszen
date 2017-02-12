@@ -15,7 +15,7 @@ public class ObslugaCSV {
 	}
 
 	public static void zapiszCSV(List<Ogloszenie> ogloszenia, File plik) {
-		try(Writer wyjscie = new PrintWriter(plik, "windows-1250")) {
+		try(Writer wyjscie = new PrintWriter(plik, "utf-8")) {
 			CSVPrinter csvPrinter = null;
 			try {
 				csvPrinter = CSVFormat.DEFAULT
