@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Pobieracz {
-	private static final int CZAS_MINIMALNY = 3;
+	private static final int CZAS_MINIMALNY = 2;
 	private static final int CZAS_MAKSYMALNY = 10;
 	
 	//private static final String SCIEZKA_GECKO = "C:/Tools/geckodriver.exe";
