@@ -10,8 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WypiszOgloszeniaNaKonsole {
-	//private static final String SCIEZKA_GECKO = "C:/Tools/geckodriver.exe";
-	private static final String SCIEZKA_GECKO = "/opt/selenium/geckodriver";
+	private static final String SCIEZKA_GECKO = "C:/Tools/geckodriver.exe";
+	//private static final String SCIEZKA_GECKO = "/opt/selenium/geckodriver";
 	
 	private static final String baseUrl = "http://moto.gratka.pl/";
 
