@@ -7,8 +7,8 @@ public class ProsteSelenium_Patryk {
 
 	public static void main(String[] args) {
 		System.out.println("Startujemy...");
-		//System.setProperty("webdriver.gecko.driver", "C:/Tools/geckodriver.exe");
-		System.setProperty("webdriver.gecko.driver", "/opt/selenium/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "C:/Tools/geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "/opt/tools/geckodriver");
 		
 		WebDriver driver = null;
 		
