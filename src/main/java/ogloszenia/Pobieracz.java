@@ -16,7 +16,7 @@ public class Pobieracz {
 	private static final int CZAS_MAKSYMALNY = 10;
 	
 	private static final String SCIEZKA_GECKO = "C:/Tools/geckodriver.exe";
-	//private static final String SCIEZKA_GECKO = "/opt/selenium/geckodriver";
+	//private static final String SCIEZKA_GECKO = "/opt/tools/geckodriver";
 	private static final String ADRES = "http://moto.gratka.pl/";
 
 	private static final Pattern regexCeny = Pattern.compile("(\\d+\\s*)+");
@@ -33,7 +33,8 @@ public class Pobieracz {
 
 	public void close() {
 		if(driver != null) {
-			driver.quit();
+			// driver.quit();
+			driver.close();
 		}
 	}
 	
